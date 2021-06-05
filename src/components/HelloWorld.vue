@@ -1,6 +1,6 @@
 <template>
   <h1>{{ msg }}</h1>
-
+  <p @click="$store.commit('add')">store:{{$store.state.counter}}</p>
   <p>
     <a href="https://vitejs.dev/guide/features.html" target="_blank">
       Vite Documentation
@@ -26,8 +26,3 @@ defineProps({
 const state = reactive({ count: 0 })
 </script>
 
-<style scoped>
-a {
-  color: #42b983;
-}
-</style>
